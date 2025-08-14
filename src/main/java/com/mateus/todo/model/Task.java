@@ -2,6 +2,7 @@ package com.mateus.todo.model;
 
 import com.mateus.todo.enums.StatusTarefa;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,6 +10,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "tasks")
+@Data
 public class Task {
 
     @Id
