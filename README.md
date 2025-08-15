@@ -18,3 +18,13 @@ Além disso, a aplicação utiliza JPA/Hibernate para comunicação com o banco.
 * PgAdmin: Interface gráfica para gerenciamento do banco PostgreSQL.
 * Maven: Gerenciador de dependências e build do projeto.
 * Lombok: Redução de código boilerplate (getters, setters, construtores etc).
+
+## Testes de endpoints com Postman
+
+A seguir, estão os endpoints testados utilizando a ferramenta Postman.
+
+### Salvar
+
+Endpoint para salvar novas tarefas no banco
+
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/4735f528-710c-4d85-9e95-f366b41d01a9" />
