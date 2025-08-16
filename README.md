@@ -21,10 +21,14 @@ Além disso, a aplicação utiliza JPA/Hibernate para comunicação com o banco.
 
 ## Testes de endpoints com Postman
 
-A seguir, estão os endpoints testados utilizando a ferramenta Postman.
+A seguir, estão os endpoints testados utilizando a ferramenta Postman. Além disso, serão mostrados os resultados das requisições no banco de dados.
 
 ### Salvar
 
 Endpoint para salvar novas tarefas no banco
 
-<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/4735f528-710c-4d85-9e95-f366b41d01a9" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/04f36c6e-6571-40c0-ab46-33f53278a41a" />
+
+<br>Resultado da requisição post no banco PostgreSQL
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/73aa5c87-25a2-4172-a767-bd620360d3b6" />
