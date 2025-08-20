@@ -9,6 +9,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class TaskService {
@@ -30,6 +32,13 @@ public class TaskService {
         Task salvo = repository.save(task);
 
         return TaskMapper.toResponse(salvo);
+    }
+
+    public List<TaskResponse> listarTodas(){
+        return repository.findAll()
+                .stream()
+                .map(TaskMapper::toResponse)
+                .toList();
     }
 
 }
