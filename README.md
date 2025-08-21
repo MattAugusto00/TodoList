@@ -62,3 +62,16 @@ Abaixo está a lista de todas tarefas que foram inseridas.
 No PostgreSQL:
 
 <img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/bfae9a9f-7002-456c-a086-21a039506d0b" />
+
+
+### <br>Atualizar
+
+Endpoint para atualizar as tarefas que estão salvas no banco de dados. Para realizar esta ação, a tarefa é buscada pelo ID.
+
+Abaixo está a atualização da tarefa de titulo "trabalho", presente no dia 2021-11-07. Ela passou de PENDENTE para CONCLUIDA.
+
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/c3349a23-7d9f-4d15-b4b6-95e7c547f990" />
+
+Em caso de tentar atualizar sem passar o valor da dataVencimento, é retornado um erro "400 Bad Request", em breve isso será modificado para que aceite atualização sem precisar passar esta data. Segue o exemplo abaixo:
+
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/a7c1f8cf-a2f8-4e8a-9e83-d9e4f1458fc4" />
