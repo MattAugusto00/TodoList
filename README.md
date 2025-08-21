@@ -22,16 +22,32 @@ Além disso, a aplicação utiliza JPA/Hibernate para comunicação com o banco.
 
 ## Testes de endpoints com Postman
 
-A seguir, estão os endpoints testados utilizando a ferramenta Postman. Além disso, serão mostrados alguns resultados das requisições no banco de dados.
+A seguir, estão os endpoints testados utilizando a ferramenta Postman. Além disso, serão mostrados alguns resultados das requisições no banco de dados. Sobre os tratamentos de erros, serão melhores implementados em breve.
 
-### Salvar
+### Salvar 
 
-Endpoint para salvar novas tarefas no banco
+Endpoint para salvar novas tarefas no banco. Serão apresentados alguns casos de falhas e sucesso.
+
+#### Caso de Sucesso
+
+Caso a requisição seja feita conforme o esperado, a resposta obtida será "201 Created", além disso, a tarefa será inserida na tabela do banco de dados.
 
 <img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/a6335a8a-6bc4-494d-a1f4-333d9e07132b" />
-
 
 <br>Resultado da nova tarefa inserida no banco PostgreSQL
 
 <img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/d91b7fc3-ad04-4944-80b2-98149cec0761" />
+
+#### Caso de Falha: mesma tarefa na mesma data
+
+Caso o usuário tente inserir uma tarefa igual na mesma data, a resposta obtida será "500 Internal Error Server", além disso, a tarefa não será inserida na tabela do banco de dados. Normalmente, tarefas repetidas podem ser feitas no mesmo dia, porém, neste projeto foi feito de forma a não permitir, para criar alguns casos de falha.
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/11122e59-a074-4a14-bb6e-f29603667899" />
+
+#### Caso de Falha: tentar salvar sem colocar o titulo ou a data de vencimento da tarefa
+
+Caso o usuário tente inserir uma tarefa sem o titulo ou a data de vencimento, a resposta obtida será "400 Bad Request", além disso, a tarefa não será inserida na tabela do banco de dados.
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/d5a222cf-45b8-45e4-9b93-e638c2d6a5ac" />
+
 
