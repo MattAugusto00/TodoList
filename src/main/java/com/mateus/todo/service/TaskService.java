@@ -60,4 +60,8 @@ public class TaskService {
         return TaskMapper.toResponse(atualizado);
     }
 
+    public void deletar(UUID id){
+        repository.deleteById(id);
+    }
+
 }
