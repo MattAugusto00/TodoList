@@ -66,12 +66,29 @@ No PostgreSQL:
 
 ### <br>Atualizar
 
-Endpoint para atualizar as tarefas que estão salvas no banco de dados. Para realizar esta ação, a tarefa é buscada pelo ID.
+Endpoint para atualizar as tarefas selecionadas que estão salvas no banco de dados. Para realizar esta ação, a tarefa é buscada pelo ID.
 
 Abaixo está a atualização da tarefa de titulo "trabalho", presente no dia 2021-11-07. Ela passou de PENDENTE para CONCLUIDA.
 
 <img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/c3349a23-7d9f-4d15-b4b6-95e7c547f990" />
 
+No PostgreSQL
+
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/2fb79d35-fafb-4bb3-bbbe-fec2f410e3b6" />
+
 Em caso de tentar atualizar sem passar o valor da dataVencimento, é retornado um erro "400 Bad Request", em breve isso será modificado para que aceite atualização sem precisar passar esta data. Segue o exemplo abaixo:
 
 <img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/a7c1f8cf-a2f8-4e8a-9e83-d9e4f1458fc4" />
+
+### <br>Deletar
+
+Endpoint para deletar as tarefas selecionadas que estão salvas no banco de dados. Para realizar esta ação, a tarefa é buscada pelo ID.
+
+Abaixo temos o exemplo da tarefa com titulo "academia" do dia 2021-11-08 sendo deletada do banco:
+
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/ecb65a63-cc6d-4acd-b97d-2599cc5a00d3" />
+
+No PostgreSQL já se pode notar sua ausência
+
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/f4f8782d-d240-47fd-9ef0-25b1709ea7e8" />
+
