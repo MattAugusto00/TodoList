@@ -80,6 +80,11 @@ Em caso de tentar atualizar sem passar o valor da dataVencimento, é retornado u
 
 <img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/a7c1f8cf-a2f8-4e8a-9e83-d9e4f1458fc4" />
 
+Outro caso de erro seria tentar atualizar uma tarefa sem passar o ID
+
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/2fddc5d1-bab0-4054-84dc-967a4f0c0c4f" />
+
+
 ### <br>Deletar
 
 Endpoint para deletar as tarefas selecionadas que estão salvas no banco de dados. Para realizar esta ação, a tarefa é buscada pelo ID.
