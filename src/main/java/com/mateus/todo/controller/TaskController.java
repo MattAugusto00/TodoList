@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/tarefas")
@@ -29,4 +30,12 @@ public class TaskController {
         List<TaskResponse> tasks = taskService.listarTodas();
         return ResponseEntity.ok(tasks);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<TaskResponse> atualizar(@PathVariable UUID id, @RequestBody @Valid TaskRequest taskRequest){
+        TaskResponse atualizado = taskService.atualizar(id, taskRequest);
+
+        return ResponseEntity.ok(atualizado);
+    }
+
 }

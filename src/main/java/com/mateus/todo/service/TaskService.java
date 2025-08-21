@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -39,6 +40,24 @@ public class TaskService {
                 .stream()
                 .map(TaskMapper::toResponse)
                 .toList();
+    }
+
+    public TaskResponse atualizar(UUID id, TaskRequest taskRequest){
+        Task task = repository.findById(id).orElseThrow(
+                () -> new RuntimeException("Tarefa não encontrada!")
+        );
+
+        task.setTitulo(taskRequest.titulo());
+        task.setDescricao(taskRequest.descricao());
+        task.setDataVencimento(taskRequest.dataVencimento());
+
+        if (taskRequest.statusTarefa() != null){
+            task.setStatusTarefa(taskRequest.statusTarefa());
+        }
+
+        Task atualizado = repository.save(task);
+
+        return TaskMapper.toResponse(atualizado);
     }
 
 }

@@ -11,7 +11,7 @@ public class TaskMapper {
         task.setTitulo(taskRequest.titulo());
         task.setDescricao(taskRequest.descricao());
         task.setDataVencimento(taskRequest.dataVencimento());
-        task.setStatusTarefa(StatusTarefa.PENDENDE);
+        task.setStatusTarefa(StatusTarefa.PENDENTE);
 
         return task;
     }

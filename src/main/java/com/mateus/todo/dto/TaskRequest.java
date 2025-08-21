@@ -1,6 +1,7 @@
 package com.mateus.todo.dto;
 
 
+import com.mateus.todo.enums.StatusTarefa;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -11,6 +12,7 @@ public record TaskRequest(
     String titulo,
     String descricao,
     @NotNull(message = "A data de vencimento é obrigatória.")
-    LocalDate dataVencimento
+    LocalDate dataVencimento,
+    StatusTarefa statusTarefa
 ) {
 }

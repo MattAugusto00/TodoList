@@ -1,7 +1,7 @@
 package com.mateus.todo.enums;
 
 public enum StatusTarefa {
-    PENDENDE,
+    PENDENTE,
     EM_ANDAMENTO,
     CONCLUIDA
 }
