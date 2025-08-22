@@ -19,6 +19,7 @@ Além disso, a aplicação utiliza JPA/Hibernate para comunicação com o banco.
 * Maven: Gerenciador de dependências e build do projeto.
 * Lombok: Redução de código boilerplate (getters, setters, construtores etc).
 * Postman: Ferramenta para testar manualmente endpoints de APIs REST, permitindo enviar requisições HTTP (GET, POST, PUT, DELETE etc.)
+* Swagger: Documenta APIs automaticamente e permite testá-las pela interface web.
 
 ## Testes de endpoints com Postman
 
