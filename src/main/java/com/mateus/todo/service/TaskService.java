@@ -2,6 +2,8 @@ package com.mateus.todo.service;
 
 import com.mateus.todo.dto.TaskRequest;
 import com.mateus.todo.dto.TaskResponse;
+import com.mateus.todo.exception.TarefaJaExistenteNaDataException;
+import com.mateus.todo.exception.TarefaNaoEncontradaException;
 import com.mateus.todo.mapper.TaskMapper;
 import com.mateus.todo.model.Task;
 import com.mateus.todo.repository.TaskRepository;
@@ -25,7 +27,7 @@ public class TaskService {
                 .isPresent();
 
         if (existe){
-            throw new RuntimeException("Já existe uma tarefa com este titulo para esta data.");
+            throw new TarefaJaExistenteNaDataException();
         }
 
         Task task = TaskMapper.toEntity(taskRequest);
@@ -44,7 +46,7 @@ public class TaskService {
 
     public TaskResponse atualizar(UUID id, TaskRequest taskRequest){
         Task task = repository.findById(id).orElseThrow(
-                () -> new RuntimeException("Tarefa não encontrada!")
+                () -> new TarefaNaoEncontradaException()
         );
 
         task.setTitulo(taskRequest.titulo());
