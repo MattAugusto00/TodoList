@@ -25,7 +25,7 @@ public class TaskController {
     @Operation(description = "Salva novas tarefas no banco de dados.")
     @ApiResponses( value = {
             @ApiResponse(responseCode = "201", description = "Requisição aceita. Tarefa foi salva com sucesso no banco."),
-            @ApiResponse(responseCode = "500", description = "Requisição falhou. Já existe uma tarefa com este titulo nesta mesma data."),
+            @ApiResponse(responseCode = "409", description = "Requisição falhou. Já existe uma tarefa com este titulo nesta mesma data."),
             @ApiResponse(responseCode = "400", description = "Requisição falhou. Tentativa de criação sem um dos campos necessarios.")
     })
     @PostMapping
